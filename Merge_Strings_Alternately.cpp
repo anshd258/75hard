@@ -2,17 +2,26 @@
 
 using namespace std;
 
+
 class Solution {
 public:
-   string  gcdOfStrings(string str1, string str2) {
-     return str1 + str2 == str2 + str1 ? str1.substr(0,gcd(size(str1),size(str2))):"";
-    }
+    string mergeAlternately(string word1, string word2) {
+        string result = "";
+        int i = 0;
+        while (i < word1.length() || i < word2.length()) {
+            if (i < word1.length()) {
+                result += word1[i];
+            }
+            if (i < word2.length()) {
+                result += word2[i];
+            }
+            i++;
+        }
+        return result;}
 };
 
 
-
-
 int main(){
-cout<<Solution().gcdOfStrings("ABCABC","ABC");
+cout<<Solution().mergeAlternately("ABCABC","ABC");
 }
 
