@@ -10,11 +10,17 @@ public:
         int j = s.length() -1;
 
         for( ; i < s.length(); i++){
+              if(i>j){
+            break;
+        }
           char  ch = s[i];
             if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
         ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
 
                   for(  ; j >=0 ; ){
+                    if(i>j){
+                    break;
+                 }
                char sh = s[j];
          
                  if(sh == 'a' || sh == 'e' || sh == 'i' || sh == 'o' || sh == 'u' ||
@@ -22,9 +28,7 @@ public:
                          swap(s[i], s[j]);
                         j = j-1;
                         break;
-                 }else if(i>j){
-                    break;
-                 }
+                 } 
                  else{
                    j = j-1;
                      continue;
@@ -34,9 +38,7 @@ public:
             }
         }
 
-        if(i>j){
-            break;
-        }
+      
           
         }
         return s;
