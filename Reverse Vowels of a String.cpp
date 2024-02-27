@@ -17,7 +17,7 @@ public:
             if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
         ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U'){
 
-                  for(  ; j >=0 ; ){
+                  for(  ; j >=0 ;j-- ){
                     if(i>j){
                     break;
                  }
@@ -26,11 +26,11 @@ public:
                  if(sh == 'a' || sh == 'e' || sh == 'i' || sh == 'o' || sh == 'u' ||
         sh == 'A' || sh == 'E' || sh == 'I' || sh == 'O' || sh == 'U'){
                          swap(s[i], s[j]);
-                        j = j-1;
+                     
                         break;
                  } 
                  else{
-                   j = j-1;
+                  
                      continue;
                  }
        
