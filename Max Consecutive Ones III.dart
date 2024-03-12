@@ -1,31 +1,19 @@
 class Solution {
   int longestOnes(List<int> nums, int k) {
-    int count = 0;
-    int temp = 0;
-    int replica = k;
-    for (var i = 0; i < nums.length; i++) {
-      replica = k;
-      temp = 0;
-      if (nums.length - i > count) {
-        for (var j = i; j < nums.length; j++) {
-          if (nums[j] == 0 && replica>0) {
-            temp++;
-            replica--;
-          } else if (nums[j] == 1) {
-            temp++;
-          }
-         else if (replica == 0) {
-            break;
-          }
+    int i=0,j=0;
+        while(j<nums.length){
+            if(nums[j]==0){
+                k--;
+            }
+            if(k<0){
+                if(nums[i]==0){
+                    k++;
+                }
+                i++;
+            }
+            j++;
         }
-      } else {
-        break;
-      }
-      if (temp > count) {
-        count = temp;
-      }
-    }
-    return count;
+        return j-i;
   }
 }
 
