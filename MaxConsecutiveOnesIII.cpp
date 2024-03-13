@@ -24,7 +24,7 @@ public:
 int main(){
        int x[] = {0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1};
     vector<int> sample(x, x + sizeof x / sizeof x[0]) ;
-     auto result = Solution().increasingTriplet(sample);
+     auto result = Solution().longestOnes(sample, 2);
       
         cout << result;
    
